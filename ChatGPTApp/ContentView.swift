@@ -8,13 +8,14 @@
 import SwiftUI
 
 struct ContentView: View {
-    var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
-        }
+        var body: some View {
+             NavigationStack {
+                 ChatListView()
+                     .navigationTitle("Chats")
+                     .navigationDestination(for: String.self) { chatId in
+                         ChatListView()
+                     }
+             }
         .padding()
     }
 }

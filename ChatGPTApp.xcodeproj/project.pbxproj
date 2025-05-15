@@ -10,6 +10,7 @@
 		49E7A2772DD53ED20091820B /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 49E7A2762DD53ED20091820B /* FirebaseAuth */; };
 		49E7A2792DD53ED20091820B /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 49E7A2782DD53ED20091820B /* FirebaseFirestore */; };
 		49E7A27B2DD53ED20091820B /* FirebaseFirestoreCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 49E7A27A2DD53ED20091820B /* FirebaseFirestoreCombine-Community */; };
+		49E7A2AF2DD6944A0091820B /* OpenAI in Frameworks */ = {isa = PBXBuildFile; productRef = 49E7A2AE2DD6944A0091820B /* OpenAI */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,11 +23,6 @@
 			path = ChatGPTApp;
 			sourceTree = "<group>";
 		};
-		49E7A27F2DD542B40091820B /* Authentication */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = Authentication;
-			sourceTree = "<group>";
-		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +32,7 @@
 			files = (
 				49E7A27B2DD53ED20091820B /* FirebaseFirestoreCombine-Community in Frameworks */,
 				49E7A2772DD53ED20091820B /* FirebaseAuth in Frameworks */,
+				49E7A2AF2DD6944A0091820B /* OpenAI in Frameworks */,
 				49E7A2792DD53ED20091820B /* FirebaseFirestore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -47,7 +44,6 @@
 			isa = PBXGroup;
 			children = (
 				49E7A2542DD5355E0091820B /* ChatGPTApp */,
-				49E7A27F2DD542B40091820B /* Authentication */,
 				49E7A2532DD5355E0091820B /* Products */,
 			);
 			sourceTree = "<group>";
@@ -77,13 +73,13 @@
 			);
 			fileSystemSynchronizedGroups = (
 				49E7A2542DD5355E0091820B /* ChatGPTApp */,
-				49E7A27F2DD542B40091820B /* Authentication */,
 			);
 			name = ChatGPTApp;
 			packageProductDependencies = (
 				49E7A2762DD53ED20091820B /* FirebaseAuth */,
 				49E7A2782DD53ED20091820B /* FirebaseFirestore */,
 				49E7A27A2DD53ED20091820B /* FirebaseFirestoreCombine-Community */,
+				49E7A2AE2DD6944A0091820B /* OpenAI */,
 			);
 			productName = ChatGPTApp;
 			productReference = 49E7A2522DD5355E0091820B /* ChatGPTApp.app */;
@@ -115,6 +111,7 @@
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
 				49E7A2752DD53ED20091820B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				49E7A2AD2DD6944A0091820B /* XCRemoteSwiftPackageReference "OpenAI" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 49E7A2532DD5355E0091820B /* Products */;
@@ -352,6 +349,14 @@
 				minimumVersion = 11.12.0;
 			};
 		};
+		49E7A2AD2DD6944A0091820B /* XCRemoteSwiftPackageReference "OpenAI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/MacPaw/OpenAI";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.4.2;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -369,6 +374,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 49E7A2752DD53ED20091820B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = "FirebaseFirestoreCombine-Community";
+		};
+		49E7A2AE2DD6944A0091820B /* OpenAI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 49E7A2AD2DD6944A0091820B /* XCRemoteSwiftPackageReference "OpenAI" */;
+			productName = OpenAI;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
